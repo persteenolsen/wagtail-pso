@@ -12,8 +12,10 @@
     <div class="row">
         <div class="col-sm-6 offset-sm-3">
 
-            <h2>Search</h2>
-
+            <p><h2>Search</h2></p>
+            
+            <p>Search for Pages by typing any word from the Menu Items</p>
+            
             <form action="{% url 'search' %}" method="get">
                 <input type="text" name="query" {% if search_query %} value="{{ search_query }}" {% endif %}>
                 <input type="submit" value="Search" class="button">
@@ -43,7 +45,10 @@
                 href="{% url 'search' %}?query={{ search_query|urlencode }}&amp;page={{ search_results.next_page_number }}">Next</a>
             {% endif %}
             {% elif search_query %}
-            No results found
+            
+            <p>No results found ...</p>
+            
+
             {% endif %}
 
 
