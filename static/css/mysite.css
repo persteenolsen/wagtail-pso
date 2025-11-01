@@ -1,0 +1,16 @@
+body{
+    background-color: white;
+    color: black;
+}
+
+.test { color:green}
+
+
+footer {
+       
+    background-color: whitesmoke;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 15px;
+    
+   }
