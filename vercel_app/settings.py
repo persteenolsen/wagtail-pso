@@ -69,7 +69,7 @@ INSTALLED_APPS = [
     # Wagtail
     'base',
     
-    # 31-10-2025 - Search 
+    # 31-10-2025 - Search towards PostgreSQL
     'search',
     
     'wagtail.contrib.forms',
