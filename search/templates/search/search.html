@@ -14,7 +14,10 @@
 
             <p><h2>Search</h2></p>
             
-            <p>Search for Pages by typing any word from the Menu items</p>
+            <p>Search for Pages by typing words from:</p>
+            - The menu items<br />
+            - Intro text<br />
+            - Page content<br /><br />
             
             <form action="{% url 'search' %}" method="get">
                 <input type="text" name="query" {% if search_query %} value="{{ search_query }}" {% endif %}>

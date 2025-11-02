@@ -6,6 +6,8 @@ from wagtail.fields import RichTextField
 # import MultiFieldPanel:
 from wagtail.admin.panels import FieldPanel, MultiFieldPanel
 
+# 02-11-2025 -search
+from wagtail.search import index
 
 class HomePage(Page):
     # add the Hero section of HomePage:
@@ -37,7 +39,22 @@ class HomePage(Page):
         help_text="Choose a page to link to for the Call to Action",
     )
 
+    # The body 
     body = RichTextField(blank=True)
+        
+    # 02-11-2025 - search
+    # Note: After adding index search fileds you need to run:
+    # python manage.py update_index
+    search_fields = Page.search_fields + [ # Inherit search_fields from Page
+       
+       # Searching in hero_text and body + the menu items ( default )
+       index.SearchField('hero_text'),
+       index.SearchField('body'),
+       
+       # Not in use for now
+       # index.FilterField('date'),
+    ]
+
 
     # modify your content_panels:
     content_panels = Page.content_panels + [
