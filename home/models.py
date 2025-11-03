@@ -43,8 +43,11 @@ class HomePage(Page):
     body = RichTextField(blank=True)
         
     # 02-11-2025 - search
-    # Note: After adding index search fileds you need to run:
+    # Note: To update the search index towards the Database you need to run:
     # python manage.py update_index
+    # 1) After adding search fields
+    # 2) When the Users create new content
+    # 3) If you change the Database 
     search_fields = Page.search_fields + [ # Inherit search_fields from Page
        
        # Searching in hero_text and body + the menu items ( default )
