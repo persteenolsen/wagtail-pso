@@ -18,10 +18,11 @@
             - The menu items<br />
             - Intro text<br />
             - Page content<br /><br />
-            
+             
             <form action="{% url 'search' %}" method="get">
-                <input type="text" name="query" {% if search_query %} value="{{ search_query }}" {% endif %}>
-                <input type="submit" value="Search" class="button">
+                <input class="form-control me-2" type="text" name="query" {% if search_query %} value="{{ search_query }}" {% endif %}>
+                <br />
+                <input class="btn btn-outline-success" type="submit" value="Search" class="button">
             </form>
 
             <br />
