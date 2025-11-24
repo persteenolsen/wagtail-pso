@@ -15,9 +15,9 @@
             <p><h2>Search for Pages</h2></p>
             
             <p>Search for Pages by typing words from:</p>
-            - The Menu items<br />
-            - Intro text<br />
-            - Page content<br /><br />
+            - The Menu Items<br />
+            - Intro Text<br />
+            - Page Content<br /><br />
              
             <form action="{% url 'search' %}" method="get">
                 <input class="form-control me-2" type="text" name="query" {% if search_query %} value="{{ search_query }}" {% endif %}>
