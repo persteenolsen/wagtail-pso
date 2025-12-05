@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col-sm-6 offset-sm-3">
 
-            <p><h2>Search for Pages</h2></p>
+            <p><h2>Search for Content</h2></p>
             
             <p>Search for content by typing words from:</p>
             - The Menu Items<br />
@@ -31,7 +31,7 @@
             <ul>
                 {% for result in search_results %}
                 <li>
-                    <h4><a href="{% pageurl result %}">{{ result }}</a></h4>
+                    <b><a href="{% pageurl result %}">{{ result }}</a></b>
                     {% if result.search_description %}
                     {{ result.search_description }}
                     {% endif %}
