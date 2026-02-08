@@ -16,8 +16,8 @@
             
             <p>Search for content by typing words from:</p>
             - The Menu Items<br />
-            - Intro Text<br />
-            - Page Content<br /><br />
+            - The Intro Text<br />
+            - The Page Content<br /><br />
              
             <form action="{% url 'search' %}" method="get">
                 <input class="form-control me-2" type="text" name="query" {% if search_query %} value="{{ search_query }}" {% endif %}>
